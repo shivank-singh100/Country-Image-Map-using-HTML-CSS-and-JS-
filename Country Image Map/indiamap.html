@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Map Of INDIA</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome</h1>
+
+        <div class="india-con">
+            <img src="res/india_map.jpg" alt="India Map" usemap="#india" id="india">
+            
+            <div class="state-con" id="state-con">
+                <img src="res/up_image.jpg" alt="UP" usemap="#up" id="upMap">
+                <button id="close">&times;</button>
+            </div>
+
+            <map name="india">
+                <area target="" alt="UP" title="UP" href="#"
+                    coords="194,164,209,162,219,169,228,173,236,176,244,181,252,180,257,188,263,193,257,195,256,203,266,207,258,210,253,213,248,218,247,224,248,231,245,239,237,236,237,227,229,228,223,223,217,219,211,221,204,220,198,220,196,214,191,218,185,218,178,217,175,209,177,201,178,194,171,191,165,189,159,187,156,181,153,173,156,166,153,159,151,151,150,143,151,136,155,131,161,132,161,143,167,141,172,143,177,145,176,150,182,152,188,155,194,156,199,159"
+                    shape="poly" id="upArea">
+
+                <map name="up">
+                    <area alt="Farrukhabad" title="Farrukhabad" href="fbd.html"
+                        coords="143,161,141,166,145,170,148,175,148,181,148,186,152,189,155,193,157,198,163,198,168,195,173,190,174,182,172,175,166,170,159,167,150,165"
+                        shape="poly" target="">
+                </map>
+            </map>
+        </div>
+    </div>
+    <script>
+        const UPMap = document.getElementById('upMap')
+        const upArea = document.getElementById('upArea');
+        const indiaMap = document.getElementById('india');
+        const closeB = document.getElementById('close');
+        const stateCon = document.getElementById('state-con');
+
+        upArea.addEventListener('click', (e) => {
+           const rect = indiaMap.getBoundingClientRect();
+           const x = e.clientX - rect.left;
+           const y = e.clientY - rect.top;
+
+           stateCon.style.left = `${x}px`;
+           stateCon.style.top = `${y}px`;
+
+           stateCon.classList.add('show');
+
+            indiaMap.style.opacity = '0.5';
+            closeB.style.display = 'block';
+        });
+
+        closeB.addEventListener('click', () => {
+           stateCon.classList.remove('show');
+            closeB.style.display = 'none'
+            indiaMap.style.opacity = 1;
+        });
+
+    </script>
+</body>
+
+</html>

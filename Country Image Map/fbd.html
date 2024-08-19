@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Farrukhabad</title>
+    <link rel="stylesheet" href="fbd.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Places to visit in Farrukhabad</h1>
+        <div class="grid-container">
+
+            <div class="image-card">
+                <h3>Mathiya Devi Temple</h3>
+                <img src="res/mathiya_devi.png" alt="img">
+                <button class="close">&times;</button>
+                <div class="expanded-content">
+                    <p>
+                        The Mathiya Devi Temple is one of the most revered temples in Farrukhabad. It is dedicated to
+                        the goddess
+                        Mathiya Devi, and the temple is a major pilgrimage site. <br> <b>To reach here:</b> It’s 3.5 km from the railway station.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <h3>Sankisa Temple</h3>
+                <img src="res/Sankisa-Temple-768x461.jpg" alt="img">
+                <button class="close">&times;</button>
+                <div class="expanded-content">
+                    <p>
+                        Following the death of Gautam Buddha, the great king Ashoka developed this region. He constructed the enormous Ashoka
+                        pillar in this town, which still stands today and is known as Elephant Capital. <br>
+                        Many travelers from countries other than India frequented this place all year round. <br>
+                        The place is well known for having ties to past Buddhists and Buddhas. Buddhists hold that the Buddha returned to Earth
+                        after spending three months in the heavens. <br> <b>To reach here:</b> It’s 3.5 km from the railway station.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <h3>Shri Pandveshwar Nath Dham</h3>
+                <img src="res/Shri-Pandveshwar-Nath-Dham-768x461.jpeg" alt="img">
+                <button class="close">&times;</button>
+                <div class="expanded-content">
+                    <p> <b></b> <br>
+                    It’s popularly known as Panda Bagh Mandir. Folklore claims that the Pandavas constructed it while they were exiled. <br>
+                    
+                    One of Lord Shiva’s oldest temples. The Shivling is thought to have been created by the Pandavas while they were on
+                    Agyatvas. <br>
+        
+                    Temples for Lord Hanuman and other deities can be seen along the temple corridor. On Mahashivratri and Sawan, a large
+                    number of worshippers visit this place. <br>
+                    
+                    <b>To reach here:</b> It’s 800 meters from the railway station and can be covered on foot.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <h3>Gurgaon Devi Temple</h3>
+                <img src="res/Gurgaon-Devi-Mandir-768x432.jpeg" alt="img">
+                <button class="close">&times;</button>
+                <div class="expanded-content">
+                    <p>
+                        The Devi temple is well known for being self-manifested (Swayambhu). It is believed that Dronacharya’s Guru once stood
+                        in this location. <br>
+                        
+                        There is a place called Mace of Bheem, which is located close to this temple. It is an iron mace that does not catch
+                        rust and is reasoned to be of Bhimsen of the Mahabharata. <br>
+                        
+                        <b>To reach here:</b> Temple is located at a distance of 3.8 km from the railway station.
+                    </p>
+                </div>
+            </div>
+
+            <div class="image-card">
+                <h3>Panchal Ghat</h3>
+                <img src="res/panchal_ghat.png" alt="img">
+                <button class="close">&times;</button>
+                <div class="expanded-content">
+                    <p> 
+                    This ghat is connected to the holy Ganges. This ghat has Panchali’s (Draupadi’s) name. To wash away their crimes, they
+                    bathe in the Ganga. Lots of tribes live here by making their tents. It’s also a good place to enjoy shopping, as it
+                    includes a series of shops with lots of variety. <br>
+                    
+                    Every year, The Kite contest is one of the city’s greatest attractions. <br>
+                    
+                    <b>To reach here:</b> It’s almost 7.6 km from Farrukhabad railway station. Public vehicles are
+                    easily available from both places, directly to the ghat.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="image-card">
+                <h3>Neeb Karori</h3>
+                <img src="res/neeb_karori.jfif" alt="img">
+                <button class="close">&times;</button>
+                <div class="expanded-content">
+                    <p>
+                        Neeb Karori is a tiny village close to antique Sankisha that is well-known for the sage Lakshman Das. <br>
+                        
+                        He is commonly referred to by the name Baba Neeb Karori, and he built numerous Lord Hanuman temples around India,
+                        including one in Farrukhabad. <br>
+                        <b>To reach here:</b> It’s at a distance of 26 km from the railway station and 11 km from the airport. Any means of transport is easily
+                        available.
+                    </p>
+                </div>
+            </div>
+           
+
+        </div>
+
+        <h1>More will be added soon...</h1>
+    </div>
+    <script>
+        document.querySelectorAll('.image-card').forEach(card => {
+            card.addEventListener('click', function () {
+                document.querySelectorAll('.image-card').forEach(c => c.classList.remove('expanded'));
+
+                this.classList.add('expanded');
+            });
+
+            card.querySelector('.close').addEventListener('click', function (e) {
+                e.stopPropagation();
+                card.classList.remove('expanded');
+            });
+        })
+    </script>
+</body>
+
+</html>
